@@ -1,5 +1,5 @@
 {% set name = "elastic-vasp" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/elastic_vasp-{{ version }}.tar.gz
-  sha256: 948b39debe4b18a0829681f4237fad650cf5b2c76c531a54657a7e6ecabc8951
+  sha256: 58ea626b4468ee08c34a87b0ca4fe6f63c2caf54856df91c746fa4b5d41ab6b1
 
 build:
   noarch: python
