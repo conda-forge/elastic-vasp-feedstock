@@ -32,7 +32,9 @@ tests:
       imports:
         - elastic_vasp
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: This package is based on python to create deformed structure and calculate second-order elastic constants from strain-energy relationship. This tool is only compatible with DFT package VASP.
