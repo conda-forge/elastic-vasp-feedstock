@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: elastic-vasp
-  version: "0.0.5"
+  version: "0.0.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/elastic_vasp-${{ version }}.tar.gz
-  sha256: 58ea626b4468ee08c34a87b0ca4fe6f63c2caf54856df91c746fa4b5d41ab6b1
+  sha256: c15ea2b0eddc9e030bf8f1eed8e0977e6d3005e2d56fa7a0ec2fe428b59da99b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
