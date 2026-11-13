@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: elastic-vasp
-  version: "0.0.6"
+  version: 0.1.2
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/elastic_vasp-${{ version }}.tar.gz
-  sha256: c15ea2b0eddc9e030bf8f1eed8e0977e6d3005e2d56fa7a0ec2fe428b59da99b
+  sha256: 30421df194d83f1cc3077c5de55cfbe3f4dbbc63cb8484549af2a571c050a829
 
 build:
   number: 0
@@ -26,7 +26,8 @@ requirements:
     - python >=${{ python_min }}
     - numpy
     - matplotlib-base
-
+    - spglib >=2.4
+    - ase >=3.23
 tests:
   - python:
       imports:
@@ -34,7 +35,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   summary: This package is based on python to create deformed structure and calculate second-order elastic constants from strain-energy relationship. This tool is only compatible with DFT package VASP.
